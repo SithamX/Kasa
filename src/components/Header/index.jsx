@@ -8,16 +8,21 @@ const HeaderBalise = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 55px;
-    border: 1px solid black;
+    padding: 25px 70px;
+    margin: auto;
+    max-width: 1440px;
+    @media (max-width: 768px) {
+        padding: 20px 20px;
+    }
 `
 const HeaderLogo = styled.img`
     width: 135px;
 `
 const StyledLink = styled(Link)`
-    margin: 20px;
+    margin-left: 40px;
     text-decoration: none;
     color: ${colors.primary};
+    font-weight: 300;
     &:hover {
         text-decoration: underline;
     }

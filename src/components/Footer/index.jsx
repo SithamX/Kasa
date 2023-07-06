@@ -1,5 +1,4 @@
 import Logo from "../../assets/LOGO-WHITE.png"
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from "../../utils/style/colors"
 
