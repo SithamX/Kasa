@@ -11,7 +11,10 @@ const CardsSection = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 15px
+    padding: 15px;
+    @media (max-width: 630px) {
+        justify-content: start;
+    }
 `
 
 function Home() {
@@ -22,6 +25,7 @@ function Home() {
                 {housings.map((housing) => 
                     <CardHousing 
                         cover={`${housing.cover}`}
+                        title={`${housing.title}`}
                     />
                 )}
         </CardsSection>

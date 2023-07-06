@@ -1,6 +1,6 @@
 //import { Link } from "react-router-dom"
 import styled from "styled-components"
-//import colors from "../../utils/style/colors"
+import colors from "../../utils/style/colors"
 
 
 
@@ -43,19 +43,44 @@ export default Card */
 const CardDiv = styled.div`
     max-width: 240px;
     height: 240px;
-    padding: 15px;
+    margin: 15px;
+    position: relative;
+    display: inline-block;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        opacity: 0.9;
+    }
+    @media (max-width: 630px) {
+        max-width: none;
+        width: 100%;
+    }
 `
-const CardImg = styled.img`
+const CardImage = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
 `
+const CardText = styled.p`
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    color: ${colors.white};
+    font-weight: 200;
+    z-index: 1;
+`
 
-function CardHousing({ cover,  }) {
+function CardHousing({ cover, title }) {
     return (
         <CardDiv>
-            <CardImg src={cover} alt="photo_logement" />
+            <CardImage src={cover} alt="photo_logement" />
+            <CardText>{title}</CardText>
         </CardDiv> 
     )
 }
