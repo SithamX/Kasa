@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -17,6 +17,6 @@ const GlobalStyle = createGlobalStyle`
             padding: 0 20px;
         }
     }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

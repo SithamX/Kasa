@@ -1,8 +1,6 @@
-//import { Link } from "react-router-dom"
-import styled from "styled-components"
-import colors from "../../utils/style/colors"
-
-
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import colors from '../../utils/style/colors';
 
 /* const CardSection = styled.section`
     background-color: ${colors.secondary};
@@ -39,7 +37,6 @@ function Card() {
 
 export default Card */
 
-
 const CardDiv = styled.div`
     max-width: 240px;
     height: 240px;
@@ -47,42 +44,57 @@ const CardDiv = styled.div`
     position: relative;
     display: inline-block;
     &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-        opacity: 0.9;
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)
+        );
+        opacity: 1;
+        border-radius: 10px;
+    }
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
     }
     @media (max-width: 630px) {
         max-width: none;
         width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
     }
-`
+`;
 const CardImage = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
-`
+`;
 const CardText = styled.p`
     position: absolute;
     bottom: 0;
-    padding: 5px;
+    padding: 12px;
+    margin: 0;
     color: ${colors.white};
-    font-weight: 200;
+    font-weight: 300;
+    font-size: 0.9em;
     z-index: 1;
-`
+`;
 
-function CardHousing({ cover, title }) {
+function CardHousing({ id, cover, title }) {
     return (
-        <CardDiv>
-            <CardImage src={cover} alt="photo_logement" />
-            <CardText>{title}</CardText>
-        </CardDiv> 
-    )
+        <Link to={`/housing/${id}`}>
+            <CardDiv>
+                <CardImage src={cover} alt="photo_logement" />
+                <CardText>{title}</CardText>
+            </CardDiv>
+        </Link>
+    );
 }
 
-export default CardHousing
+export default CardHousing;

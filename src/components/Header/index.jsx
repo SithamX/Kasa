@@ -1,8 +1,7 @@
-import Logo from "../../assets/LOGO.png"
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import colors from "../../utils/style/colors"
-
+import Logo from '../../assets/LOGO.png';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import colors from '../../utils/style/colors';
 
 const HeaderBalise = styled.header`
     display: flex;
@@ -14,10 +13,10 @@ const HeaderBalise = styled.header`
     @media (max-width: 768px) {
         padding: 20px 20px;
     }
-`
+`;
 const HeaderLogo = styled.img`
     width: 135px;
-`
+`;
 const StyledLink = styled(Link)`
     margin-left: 40px;
     text-decoration: none;
@@ -26,7 +25,7 @@ const StyledLink = styled(Link)`
     &:hover {
         text-decoration: underline;
     }
-`
+`;
 
 function Header() {
     return (
@@ -37,7 +36,7 @@ function Header() {
                 <StyledLink to="/about">A Propos</StyledLink>
             </nav>
         </HeaderBalise>
-    )
+    );
 }
 
-export default Header
+export default Header;

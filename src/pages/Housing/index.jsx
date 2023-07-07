@@ -3,7 +3,7 @@ function Housing() {
         <div>
             <h1>Page d'un logement</h1>
         </div>
-    )
+    );
 }
 
-export default Housing
+export default Housing;
