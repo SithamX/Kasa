@@ -37,10 +37,7 @@ function Card() {
 
 export default Card */
 
-const CardDiv = styled.div`
-    max-width: 240px;
-    height: 240px;
-    margin: 15px;
+const CardLink = styled(Link)`
     position: relative;
     display: inline-block;
     &::after {
@@ -62,12 +59,6 @@ const CardDiv = styled.div`
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 10px;
     }
-    @media (max-width: 630px) {
-        max-width: none;
-        width: 100%;
-        margin: 0;
-        margin-bottom: 15px;
-    }
 `;
 const CardImage = styled.img`
     width: 100%;
@@ -78,7 +69,7 @@ const CardImage = styled.img`
 const CardText = styled.p`
     position: absolute;
     bottom: 0;
-    padding: 12px;
+    padding: 15px;
     margin: 0;
     color: ${colors.white};
     font-weight: 300;
@@ -88,12 +79,10 @@ const CardText = styled.p`
 
 function CardHousing({ id, cover, title }) {
     return (
-        <Link to={`/housing/${id}`}>
-            <CardDiv>
-                <CardImage src={cover} alt="photo_logement" />
-                <CardText>{title}</CardText>
-            </CardDiv>
-        </Link>
+        <CardLink to={`/housing/${id}`}>
+            <CardImage src={cover} alt="photo_logement" />
+            <CardText>{title}</CardText>
+        </CardLink>
     );
 }
 

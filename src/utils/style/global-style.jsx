@@ -10,10 +10,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     main {
-        max-width: 1440px;
+        max-width: 1300px;
         padding: 0px 60px;
         margin: auto;
-        @media (max-width: 768px) {
+        @media (max-width: 980px) {
             padding: 0 20px;
         }
     }

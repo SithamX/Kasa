@@ -1,6 +1,6 @@
-import Logo from "../../assets/LOGO-WHITE.png";
-import styled from "styled-components";
-import colors from "../../utils/style/colors";
+import Logo from '../../assets/LOGO-WHITE.png';
+import styled from 'styled-components';
+import colors from '../../utils/style/colors';
 
 const FooterBalise = styled.footer`
     background-color: ${colors.black};
