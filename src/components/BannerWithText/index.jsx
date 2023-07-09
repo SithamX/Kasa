@@ -1,11 +1,10 @@
-import ImageBanner from '../../assets/image-banner-home.jpg';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 
 const BannerSection = styled.section`
     height: 150px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(${ImageBanner});
+        url(${(prop) => prop.imageUrl});
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -19,7 +18,7 @@ const BannerSection = styled.section`
         border-radius: 10px;
     }
 `;
-const BannerText = styled.h1`
+const BannerTitle = styled.h1`
     color: ${colors.white};
     font-weight: 300;
     font-size: 2em;
@@ -37,14 +36,14 @@ const BannerText = styled.h1`
     }
 `;
 
-function BannerHome() {
+function BannerWithText({ imageUrl }) {
     return (
-        <BannerSection>
-            <BannerText>
+        <BannerSection imageUrl={imageUrl}>
+            <BannerTitle>
                 Chez vous, <span>partout et ailleurs</span>
-            </BannerText>
+            </BannerTitle>
         </BannerSection>
     );
 }
 
-export default BannerHome;
+export default BannerWithText;
