@@ -1,8 +1,13 @@
+import BannerHome from '../../components/Banner';
+
 function About() {
     return (
-        <div>
-            <h1>Page A Propos</h1>
-        </div>
+        <main>
+            <BannerHome />
+            <div>
+                <h1>Page A Propos</h1>
+            </div>
+        </main>
     );
 }
 

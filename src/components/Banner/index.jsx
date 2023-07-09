@@ -1,4 +1,4 @@
-import ImageBanner from '../../assets/image-banner-home.png';
+import ImageBanner from '../../assets/image-banner-home.jpg';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 
