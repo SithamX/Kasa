@@ -36,13 +36,12 @@ const BannerText = styled.h1`
         font-size: 1.7em;
     }
 `;
-const BannerTextSpan = styled.span``;
 
 function BannerHome() {
     return (
         <BannerSection>
             <BannerText>
-                Chez vous, <BannerTextSpan>partout et ailleurs</BannerTextSpan>
+                Chez vous, <span>partout et ailleurs</span>
             </BannerText>
         </BannerSection>
     );

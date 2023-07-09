@@ -16,6 +16,9 @@ const HeaderBalise = styled.header`
 `;
 const HeaderLogo = styled.img`
     width: 135px;
+    @media (max-width: 335px) {
+        width: 120px;
+    }
 `;
 const HeaderNav = styled.nav`
     width: 167px;
