@@ -37,7 +37,6 @@ const CardText = styled.p`
     padding: 15px;
     margin: 0;
     color: ${colors.white};
-    font-weight: 300;
     font-size: 0.9em;
     z-index: 1;
 `;

@@ -31,7 +31,6 @@ const HeaderNav = styled.nav`
 const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${colors.primary};
-    font-weight: 300;
     &:hover {
         text-decoration: underline;
     }

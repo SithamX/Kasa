@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
     * {
       font-family: Montserrat, Helvetica, sans-serif;
+      font-weight: 300;
     }
 
     body {

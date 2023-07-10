@@ -20,7 +20,6 @@ const BannerSection = styled.section`
 `;
 const BannerTitle = styled.h1`
     color: ${colors.white};
-    font-weight: 300;
     font-size: 2em;
     @media (max-width: 595px) {
         font-size: 1.8em;
