@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 
 const CollapseDiv = styled.div`
-    border: 1px solid black;
     border-radius: 5px;
 `;
 const CollapseUnrollDiv = styled.div`
@@ -36,16 +35,16 @@ const CollapseDescription = styled.p`
     border-radius: 0 0 5px 5px;
 `;
 
-function Collapse() {
+function Collapse({ title, description }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <CollapseDiv>
             <CollapseUnrollDiv>
-                <CollapseTitle>Fiabilité</CollapseTitle>
+                <CollapseTitle>{title}</CollapseTitle>
                 <ArrowImg src={Arrow} alt="" />
             </CollapseUnrollDiv>
-            <CollapseDescription>Respect</CollapseDescription>
+            <CollapseDescription>{description}</CollapseDescription>
         </CollapseDiv>
     );
 }
