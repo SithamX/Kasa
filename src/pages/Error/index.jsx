@@ -45,7 +45,7 @@ function Error() {
                 <DescriptionError>
                     Oups! La page que vous demandez n'existe pas.
                 </DescriptionError>
-                <ErrorLink>Retourner sur la page d'accueil</ErrorLink>
+                <ErrorLink to="/">Retourner sur la page d'accueil</ErrorLink>
             </ErrorPageSection>
         </main>
     );

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Arrow from '../../assets/arrow.svg';
+import ArrowDown from '../../assets/arrow-down.svg';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 
@@ -50,11 +51,15 @@ const CollapseDescription = styled.p`
 function Collapse({ title, description }) {
     const [isOpen, setIsOpen] = useState(false);
 
+    function basculerAffichage() {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <CollapseDiv>
             <CollapseUnrollDiv onClick={() => setIsOpen(!isOpen)}>
                 <CollapseTitle>{title}</CollapseTitle>
-                <ArrowImg src={Arrow} alt="" />
+                <ArrowImg src={basculerAffichage ? Arrow : ArrowDown} alt="" />
             </CollapseUnrollDiv>
             {isOpen && <CollapseDescription>{description}</CollapseDescription>}
         </CollapseDiv>

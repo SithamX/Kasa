@@ -1,5 +1,5 @@
 import Logo from '../../assets/LOGO.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 
@@ -31,7 +31,7 @@ const HeaderNav = styled.nav`
 const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${colors.primary};
-    &:hover {
+    &.underline {
         text-decoration: underline;
     }
     @media (max-width: 980px) {
@@ -44,12 +44,26 @@ const StyledLink = styled(Link)`
 `;
 
 function Header() {
+    const location = useLocation();
+
     return (
         <HeaderBalise>
             <HeaderLogo src={Logo} alt="logo" />
             <HeaderNav>
-                <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/about">A Propos</StyledLink>
+                <StyledLink
+                    to="/"
+                    className={location.pathname === '/' ? 'underline' : ''}
+                >
+                    Accueil
+                </StyledLink>
+                <StyledLink
+                    to="/about"
+                    className={
+                        location.pathname === '/about' ? 'underline' : ''
+                    }
+                >
+                    A Propos
+                </StyledLink>
             </HeaderNav>
         </HeaderBalise>
     );
