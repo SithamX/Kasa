@@ -43,7 +43,7 @@ const CardsDiv = styled.div`
         gap: 35px;
     }
     @media (max-width: 425px) {
-        gap: 25;
+        gap: 20px;
     }
 `;
 

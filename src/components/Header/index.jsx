@@ -28,6 +28,9 @@ const HeaderLogo = styled.img`
     @media (max-width: 375px) {
         width: 130px;
     }
+    @media (max-width: 325px) {
+        width: 110px;
+    }
 `;
 const HeaderNav = styled.nav`
     width: 250px;
@@ -40,7 +43,10 @@ const HeaderNav = styled.nav`
         width: 180px;
     }
     @media (max-width: 490px) {
-        width: 145px;
+        width: 160px;
+    }
+    @media (max-width: 375px) {
+        width: 150px;
     }
 `;
 const StyledLink = styled(Link)`
@@ -55,8 +61,12 @@ const StyledLink = styled(Link)`
         font-size: 1.2em;
     }
     @media (max-width: 490px) {
-        font-size: 0.95em;
+        text-transform: uppercase;
+        font-size: 0.85em;
         margin-left: 10px;
+    }
+    @media (max-width: 375px) {
+        font-size: 0.8em;
     }
 `;
 
