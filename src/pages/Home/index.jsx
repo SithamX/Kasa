@@ -36,7 +36,7 @@ const CardsDiv = styled.div`
     @media (max-width: 980px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
-        grid-auto-rows: 270px;
+        grid-auto-rows: 300px;
     }
     @media (max-width: 715px) {
         grid-template-columns: 1fr;
@@ -44,6 +44,7 @@ const CardsDiv = styled.div`
     }
     @media (max-width: 425px) {
         gap: 20px;
+        grid-auto-rows: 260px;
     }
 `;
 
