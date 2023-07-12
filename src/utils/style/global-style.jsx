@@ -11,12 +11,15 @@ const GlobalStyle = createGlobalStyle`
     }
 
     main {
-        max-width: 1300px;
-        padding: 0px 60px;
+        max-width: 1260px;
+        padding: 0px 5%;
         margin: auto;
-        @media (max-width: 980px) {
-            padding: 0 20px;
+        @media (max-width: 1024px) {
+            padding: 0 40px;
         }
+        @media (max-width: 850px) {
+          padding: 0 20px;
+      }
     }
 `;
 

@@ -16,30 +16,30 @@ const CollapseUnrollDiv = styled.div`
     padding-left: 15px;
     padding-right: 25px;
     cursor: pointer;
-    @media (max-width: 425px) {
-        height: 35px;
-    }
-`;
-const ArrowImg = styled.img`
-    rotate: 180deg;
-    width: 19px;
-    user-select: none;
-    &.ArrowUp {
-        rotate: 0deg;
-    }
-    &.ArrowDown {
-        rotate: 180deg;
-    }
-    @media (max-width: 425px) {
-        width: 17px;
+    @media (max-width: 490px) {
+        height: 33px;
+        padding-right: 15px;
     }
 `;
 const CollapseTitle = styled.h2`
     margin: 0;
     color: ${colors.white};
     font-size: 1.2em;
-    @media (max-width: 425px) {
-        font-size: 1em;
+    @media (max-width: 490px) {
+        font-size: 0.9em;
+    }
+`;
+const ArrowImg = styled.img`
+    width: 19px;
+    user-select: none;
+    &.ArrowUp {
+        rotate: 180deg;
+    }
+    &.ArrowDown {
+        rotate: 0deg;
+    }
+    @media (max-width: 490px) {
+        width: 17px;
     }
 `;
 const CollapseDescription = styled.p`
@@ -48,7 +48,7 @@ const CollapseDescription = styled.p`
     color: ${colors.primary};
     padding: 20px 25px 10px 15px;
     border-radius: 0 0 5px 5px;
-    @media (max-width: 425px) {
+    @media (max-width: 490px) {
         font-size: 0.9em;
         padding: 20px 20px 20px 12px;
     }

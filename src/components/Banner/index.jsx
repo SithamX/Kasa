@@ -5,7 +5,7 @@ import colors from '../../utils/style/colors';
 import { useLocation } from 'react-router-dom';
 
 const BannerSection = styled.section`
-    height: 150px;
+    height: 200px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url(${HomeBannerImage});
     background-size: cover;
@@ -14,20 +14,29 @@ const BannerSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
     &.AboutPage {
-        height: 170px;
         background-image: linear-gradient(
                 rgba(0, 0, 0, 0.3),
                 rgba(0, 0, 0, 0.3)
             ),
             url(${AboutBannerImage});
-        @media (max-width: 425px) {
+        @media (max-width: 850px) {
+            height: 210px;
+        }
+        @media (max-width: 490px) {
             border-radius: 10px;
             height: 230px;
         }
     }
+    @media (max-width: 850px) {
+        height: 170px;
+        margin-top: 10px;
+    }
     @media (max-width: 490px) {
         justify-content: start;
+        margin-top: 0;
+        height: 120px;
     }
     @media (max-width: 425px) {
         border-radius: 10px;
@@ -35,18 +44,22 @@ const BannerSection = styled.section`
 `;
 const BannerTitle = styled.h1`
     color: ${colors.white};
-    font-size: 2em;
+    font-size: 3em;
+    @media (max-width: 1024px) {
+        font-size: 2.5em;
+    }
+    @media (max-width: 850px) {
+        font-size: 2.2em;
+    }
     @media (max-width: 595px) {
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
     @media (max-width: 490px) {
+        font-size: 1.7em;
         margin-left: 20px;
         margin-right: 20px;
         display: flex;
         flex-direction: column;
-    }
-    @media (max-width: 530px) {
-        font-size: 1.7em;
     }
 `;
 

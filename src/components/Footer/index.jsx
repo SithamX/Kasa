@@ -21,7 +21,7 @@ function Footer() {
     return (
         <FooterBalise>
             <FooterLogo src={Logo} alt="logo" />
-            <FooterText>© 2020 Kasa. All rights reserved</FooterText>
+            <FooterText>&copy; 2020 Kasa. All rights reserved</FooterText>
         </FooterBalise>
     );
 }

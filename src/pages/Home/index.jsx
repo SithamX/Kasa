@@ -24,7 +24,7 @@ const CardsDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 300px;
-    gap: 35px;
+    grid-gap: 35px;
     @media (max-width: 1166px) {
         grid-auto-rows: minmax(240px, auto);
     }
