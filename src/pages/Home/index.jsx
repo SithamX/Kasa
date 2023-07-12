@@ -9,9 +9,15 @@ const CardsSection = styled.section`
     margin-bottom: 30px;
     background-color: ${colors.secondary};
     border-radius: 20px;
-    padding: 35px;
+    padding: 55px;
+    @media (max-width: 1250px) {
+        padding: 25px;
+    }
     @media (max-width: 980px) {
         padding: 25px;
+    }
+    @media (max-width: 715px) {
+        padding: 35px;
     }
     @media (max-width: 425px) {
         padding: 0;
@@ -23,17 +29,18 @@ const CardsSection = styled.section`
 const CardsDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 300px;
-    grid-gap: 35px;
-    @media (max-width: 1166px) {
-        grid-auto-rows: minmax(240px, auto);
+    gap: 55px;
+    @media (max-width: 1250px) {
+        gap: 25px;
     }
     @media (max-width: 980px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
+        grid-auto-rows: 270px;
     }
-    @media (max-width: 595px) {
+    @media (max-width: 715px) {
         grid-template-columns: 1fr;
+        gap: 35px;
     }
     @media (max-width: 425px) {
         gap: 25;

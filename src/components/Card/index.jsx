@@ -5,6 +5,8 @@ import colors from '../../utils/style/colors';
 const CardLink = styled(Link)`
     position: relative;
     display: inline-block;
+    aspect-ratio: 1/1;
+    overflow: hidden;
     &::after {
         content: '';
         position: absolute;
@@ -23,6 +25,9 @@ const CardLink = styled(Link)`
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 10px;
+    }
+    @media (max-width: 980px) {
+        aspect-ratio: unset;
     }
 `;
 const CardImage = styled.img`
