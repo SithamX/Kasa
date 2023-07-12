@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Arrow from '../../assets/arrow.svg';
-import ArrowDown from '../../assets/arrow-down.svg';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 
@@ -24,6 +23,13 @@ const CollapseUnrollDiv = styled.div`
 const ArrowImg = styled.img`
     rotate: 180deg;
     width: 19px;
+    user-select: none;
+    &.ArrowUp {
+        rotate: 0deg;
+    }
+    &.ArrowDown {
+        rotate: 180deg;
+    }
     @media (max-width: 425px) {
         width: 17px;
     }
@@ -51,15 +57,15 @@ const CollapseDescription = styled.p`
 function Collapse({ title, description }) {
     const [isOpen, setIsOpen] = useState(false);
 
-    function basculerAffichage() {
-        setIsOpen(!isOpen);
-    }
-
     return (
         <CollapseDiv>
             <CollapseUnrollDiv onClick={() => setIsOpen(!isOpen)}>
                 <CollapseTitle>{title}</CollapseTitle>
-                <ArrowImg src={basculerAffichage ? Arrow : ArrowDown} alt="" />
+                <ArrowImg
+                    src={Arrow}
+                    className={isOpen ? 'ArrowUp' : 'ArrowDown'}
+                    alt="Flèche de direction du collapse"
+                />
             </CollapseUnrollDiv>
             {isOpen && <CollapseDescription>{description}</CollapseDescription>}
         </CollapseDiv>
