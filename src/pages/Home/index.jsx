@@ -1,5 +1,4 @@
-import BannerWithText from '../../components/BannerWithText';
-import HomeBannerImage from '../../assets/image-banner-home.jpg';
+import Banner from '../../components/Banner';
 import CardHousing from '../../components/Card';
 import housings from '../../datas/housing.json';
 import styled from 'styled-components';
@@ -44,7 +43,7 @@ const CardsDiv = styled.div`
 function Home() {
     return (
         <main>
-            <BannerWithText imageUrl={HomeBannerImage} />
+            <Banner />
             <CardsSection>
                 <CardsDiv>
                     {housings.map((housing) => (

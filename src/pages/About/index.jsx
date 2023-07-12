@@ -1,5 +1,4 @@
-import BannerWithoutText from '../../components/BannerWithoutText';
-import AboutBannerImage from '../../assets/image-banner-about.jpg';
+import Banner from '../../components/Banner';
 import Collapse from '../../components/Collapse';
 import about from '../../datas/about.json';
 import styled from 'styled-components';
@@ -19,7 +18,7 @@ const CollapseDivContainer = styled.div`
 function About() {
     return (
         <main>
-            <BannerWithoutText imageUrl={AboutBannerImage} />
+            <Banner />
             <section>
                 <CollapseDivContainer>
                     {about.map((about) => (
