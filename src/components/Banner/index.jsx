@@ -28,6 +28,7 @@ const BannerSection = styled.section`
         @media (max-width: 490px) {
             border-radius: 10px;
             height: 230px;
+            margin-top: 0;
         }
     }
     @media (max-width: 850px) {

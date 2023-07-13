@@ -7,6 +7,7 @@ const CardLink = styled(Link)`
     display: inline-block;
     aspect-ratio: 1/1;
     overflow: hidden;
+    border-radius: 10px;
     &::after {
         content: '';
         position: absolute;
@@ -20,11 +21,7 @@ const CardLink = styled(Link)`
             rgba(0, 0, 0, 0)
         );
         opacity: 1;
-        border-radius: 10px;
-    }
-    &:hover {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border-radius: 10px;
+        pointer-events: none;
     }
     @media (max-width: 980px) {
         aspect-ratio: unset;
@@ -33,8 +30,11 @@ const CardLink = styled(Link)`
 const CardImage = styled.img`
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     object-fit: cover;
+    transition: transform 0.3s ease-out;
+    &:hover {
+        transform: scale(1.15);
+    }
 `;
 const CardText = styled.p`
     position: absolute;

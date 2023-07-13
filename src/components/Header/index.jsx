@@ -1,4 +1,4 @@
-import Logo from '../../assets/LOGO.png';
+import Logo from '../../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';

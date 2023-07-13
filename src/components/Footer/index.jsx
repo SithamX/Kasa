@@ -1,4 +1,4 @@
-import Logo from '../../assets/LOGO-WHITE.png';
+import Logo from '../../assets/logo-white.png';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 
