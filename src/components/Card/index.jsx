@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 
@@ -54,5 +55,11 @@ function CardHousing({ id, cover, title }) {
         </CardLink>
     );
 }
+
+CardHousing.propTypes = {
+    id: PropTypes.number.isRequired,
+    cover: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+};
 
 export default CardHousing;
