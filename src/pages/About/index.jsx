@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const CollapseDivContainer = styled.div`
     display: grid;
-    gap: 25px;
+    gap: 30px;
     margin: 25px 120px;
     @media (max-width: 1024px) {
         margin: 25px 90px;
@@ -19,6 +19,23 @@ const CollapseDivContainer = styled.div`
     }
 `;
 
+const CollapseDescriptionParagraph = styled.p`
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 5px 5px;
+    @media (max-width: 1024px) {
+        font-size: 1.3em;
+    }
+    @media (max-width: 768px) {
+        font-size: 1.1em;
+    }
+    @media (max-width: 490px) {
+        font-size: 0.8em;
+    }
+`;
+
 function About() {
     return (
         <main>
@@ -27,9 +44,12 @@ function About() {
                 {about.map((about) => (
                     <Collapse
                         key={`${about.id}`}
-                        id={`${about.id}`}
                         title={`${about.title}`}
-                        description={`${about.description}`}
+                        description={
+                            <CollapseDescriptionParagraph>
+                                {about.description}
+                            </CollapseDescriptionParagraph>
+                        }
                     />
                 ))}
             </CollapseDivContainer>

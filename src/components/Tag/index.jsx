@@ -10,7 +10,7 @@ const TagText = styled.p`
     color: ${colors.white};
     font-size: 0.9em;
     text-align: center;
-    margin: 5px 40px;
+    margin: 5px 35px;
 `;
 
 function Tag({ tags }) {

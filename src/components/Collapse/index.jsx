@@ -70,14 +70,13 @@ const CollapseArrow = styled.img`
         width: 17px;
     }
 `;
-const CollapseDescription = styled.p`
+const CollapseDescriptionDiv = styled.div`
     margin: 0;
     background-color: ${colors.secondary};
     color: ${colors.primary};
-    padding: 20px 25px 10px 15px;
+    padding: 27px 20px 15px 20px;
     border-radius: 0 0 5px 5px;
     @media (max-width: 490px) {
-        font-size: 0.8em;
         padding: 15px 12px 20px 12px;
     }
     &.HousingPage {
@@ -108,11 +107,11 @@ function Collapse({ title, description }) {
                 />
             </CollapseUnrollDiv>
             {isOpen && (
-                <CollapseDescription
+                <CollapseDescriptionDiv
                     className={isHousingPage ? 'HousingPage' : ''}
                 >
                     {description}
-                </CollapseDescription>
+                </CollapseDescriptionDiv>
             )}
         </CollapseDiv>
     );
