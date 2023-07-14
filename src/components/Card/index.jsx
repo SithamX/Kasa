@@ -57,7 +57,7 @@ function CardHousing({ id, cover, title }) {
 }
 
 CardHousing.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     cover: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
 };
