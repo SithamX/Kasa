@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
         max-width: 1260px;
         padding: 0px 5%;
         margin: auto;
+        min-height: 72.25vh;
         @media (max-width: 1024px) {
             padding: 0 40px;
         }
