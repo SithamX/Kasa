@@ -5,6 +5,14 @@ import styled from 'styled-components';
 const StarsDiv = styled.div`
     display: flex;
     gap: 15px;
+    @media (max-width: 375px) {
+        gap: 8px;
+    }
+`;
+const StarImg = styled.img`
+    @media (max-width: 375px) {
+        height: 13px;
+    }
 `;
 
 function StarRating({ rating }) {
@@ -16,10 +24,10 @@ function StarRating({ rating }) {
     return (
         <StarsDiv>
             {filledStars.map((_, index) => (
-                <img key={index} src={FilledStar} alt="Étoile remplie" />
+                <StarImg key={index} src={FilledStar} alt="Étoile remplie" />
             ))}
             {emptyStars.map((_, index) => (
-                <img key={index} src={EmptyStar} alt="Étoile vide" />
+                <StarImg key={index} src={EmptyStar} alt="Étoile vide" />
             ))}
         </StarsDiv>
     );

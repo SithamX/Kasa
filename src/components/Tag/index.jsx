@@ -11,6 +11,9 @@ const TagText = styled.p`
     font-size: 0.9em;
     text-align: center;
     margin: 5px 35px;
+    @media (max-width: 375px) {
+        font-size: 0.7em;
+    }
 `;
 
 function Tag({ tags }) {

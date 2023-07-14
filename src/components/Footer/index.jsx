@@ -9,12 +9,25 @@ const FooterBalise = styled.footer`
     align-items: center;
 `;
 const FooterLogo = styled.img`
-    width: 80px;
-    margin-top: 40px;
+    width: 110px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    @media (max-width: 427px) {
+        margin-bottom: 30px;
+    }
 `;
 const FooterText = styled.p`
-    padding: 5px;
     color: ${colors.white};
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    @media (max-width: 980px) {
+        font-size: 0.9em;
+    }
+    @media (max-width: 427px) {
+        font-size: 0.75em;
+        margin-bottom: 60px;
+    }
 `;
 
 function Footer() {

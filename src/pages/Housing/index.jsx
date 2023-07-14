@@ -13,25 +13,45 @@ const HousingDivInformations = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 30px 0 25px 0;
+    @media (max-width: 566px) {
+        flex-direction: column;
+    }
+    @media (max-width: 375px) {
+        margin-top: 10px;
+    }
 `;
 const HousingTitle = styled.h1`
     color: ${colors.primary};
     font-size: 2.3em;
     margin: 0 0 5px 0;
+    @media (max-width: 375px) {
+        font-size: 1.1em;
+    }
 `;
 const HousingLocation = styled.p`
     color: ${colors.primary};
     font-size: 1.2em;
     margin-top: 0;
+    @media (max-width: 375px) {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
 `;
 const HousingTagDiv = styled.div`
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 `;
 const HousingHostStarsDiv = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
+    @media (max-width: 566px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
 `;
 const HousingCollapseDiv = styled.div`
     display: grid;
@@ -49,9 +69,6 @@ const CollapseDescriptionParagraph = styled.p`
     margin: 0;
     padding: 0;
     border-radius: 0 0 5px 5px;
-    @media (max-width: 1024px) {
-        font-size: 1.3em;
-    }
     @media (max-width: 768px) {
         font-size: 1.1em;
     }
@@ -64,6 +81,12 @@ const HousingCollapseLi = styled.li`
     padding-left: 0;
     font-size: 1.1em;
     line-height: 1.4;
+    @media (max-width: 768px) {
+        font-size: 1.1em;
+    }
+    @media (max-width: 490px) {
+        font-size: 0.8em;
+    }
 `;
 
 function Housing() {
