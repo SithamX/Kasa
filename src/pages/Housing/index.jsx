@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import Error from '../Error';
 import Carrousel from '../../components/Carrousel';
-import housings from '../../datas/housing.json';
+import housings from '../../datas/housings.json';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 import Tag from '../../components/Tag';

@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner';
 import CardHousing from '../../components/Card';
-import housings from '../../datas/housing.json';
+import housings from '../../datas/housings.json';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
 

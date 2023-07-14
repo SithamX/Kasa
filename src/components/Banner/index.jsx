@@ -4,7 +4,7 @@ import AboutBannerImage from '../../assets/image-banner-about.jpg';
 import colors from '../../utils/style/colors';
 import { useLocation } from 'react-router-dom';
 
-const BannerSection = styled.section`
+const BannerDiv = styled.div`
     height: 200px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url(${HomeBannerImage});
@@ -72,7 +72,7 @@ function Banner() {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
     return (
-        <BannerSection
+        <BannerDiv
             className={location.pathname === '/about' ? 'AboutPage' : ''}
         >
             {isHomePage && (
@@ -80,7 +80,7 @@ function Banner() {
                     Chez vous, <span>partout et ailleurs</span>
                 </BannerTitle>
             )}
-        </BannerSection>
+        </BannerDiv>
     );
 }
 
