@@ -106,10 +106,8 @@ function Housing() {
         <main>
             <section>
                 <Carrousel pictures={housingData.pictures} />
-                <HousingDivInformations /* à la limite, je peux mettre <article> à la place de <div> ici */
-                >
+                <HousingDivInformations>
                     <div>
-                        {/* Titre, lieu et tags */}
                         <HousingTitle>{housingData.title}</HousingTitle>
                         <HousingLocation>
                             {housingData.location}
@@ -121,7 +119,6 @@ function Housing() {
                         </HousingTagDiv>
                     </div>
                     <HousingHostStarsDiv>
-                        {/* Profil et note en étoiles */}
                         <Host
                             name={housingData.host.name}
                             picture={housingData.host.picture}
