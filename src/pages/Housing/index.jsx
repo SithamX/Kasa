@@ -69,8 +69,8 @@ const CollapseDescriptionParagraph = styled.p`
     margin: 0;
     padding: 0;
     border-radius: 0 0 5px 5px;
-    @media (max-width: 768px) {
-        font-size: 1.1em;
+    @media (max-width: 1024px) {
+        font-size: 1em;
     }
     @media (max-width: 490px) {
         font-size: 0.8em;

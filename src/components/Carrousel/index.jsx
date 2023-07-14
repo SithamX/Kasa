@@ -11,7 +11,7 @@ const CarrouselDiv = styled.div`
     @media (max-width: 850px) {
         height: 300px;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 490px) {
         height: 265px;
     }
 `;
@@ -21,7 +21,7 @@ const CarrouselArrows = styled.img`
     transform: translateY(-50%);
     &.ArrowLeft {
         left: 25px;
-        @media (max-width: 375px) {
+        @media (max-width: 490px) {
             left: 7px;
         }
     }
@@ -29,7 +29,7 @@ const CarrouselArrows = styled.img`
         transform: translateY(-50%) rotate(180deg);
         transform-origin: center;
         right: 25px;
-        @media (max-width: 375px) {
+        @media (max-width: 490px) {
             right: 7px;
         }
     }
@@ -38,6 +38,9 @@ const CarrouselArrows = styled.img`
     }
     @media (max-width: 768px) {
         height: 50px;
+    }
+    @media (max-width: 490px) {
+        height: 30px;
     }
     @media (max-width: 375px) {
         height: 20px;
@@ -49,7 +52,7 @@ const CarrouselPictures = styled.img`
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
-    @media (max-width: 375px) {
+    @media (max-width: 425px) {
         border-radius: 10px;
     }
 `;
@@ -58,7 +61,7 @@ const CarrouselCounter = styled.div`
     bottom: 25px;
     right: 50%;
     color: ${colors.white};
-    @media (max-width: 375px) {
+    @media (max-width: 425px) {
         display: none;
     }
 `;

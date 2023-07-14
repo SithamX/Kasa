@@ -16,7 +16,7 @@ const HostName = styled.span`
     @media (max-width: 566px) {
         font-size: 1em;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 425px) {
         font-size: 0.8em;
         margin-right: 13px;
     }
@@ -24,8 +24,8 @@ const HostName = styled.span`
 const HostImage = styled.img`
     border-radius: 50%;
     height: 70px;
-    @media (max-width: 375px) {
-        height: 45px;
+    @media (max-width: 425px) {
+        height: 40px;
     }
 `;
 const FirstName = styled.span`

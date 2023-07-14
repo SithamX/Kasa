@@ -5,12 +5,18 @@ import styled from 'styled-components';
 const StarsDiv = styled.div`
     display: flex;
     gap: 15px;
-    @media (max-width: 375px) {
+    @media (max-width: 566px) {
+        gap: 10px;
+    }
+    @media (max-width: 425px) {
         gap: 8px;
     }
 `;
 const StarImg = styled.img`
-    @media (max-width: 375px) {
+    @media (max-width: 566px) {
+        height: 20px;
+    }
+    @media (max-width: 425px) {
         height: 13px;
     }
 `;
